@@ -26,3 +26,27 @@ const myfunction=function(){
 }
 //console.log(myfunction);   
 // Data Type of function is object function
+
+
+///+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+//Stack Memory is used in Primitive type and heap memory is used in Non Primitive type
+
+let youtubename="Trinath B Sharma"
+let anotheryoutube=youtubename
+anotheryoutube="Trinath"
+console.log(youtubename);
+console.log(anotheryoutube);
+
+
+let userone={
+    email:"trinathb@google.com",
+    upi:"trinath@sbi"
+}
+let usertwo=userone
+usertwo.email="trinath16@google.com"
+console.log(userone.email);
+console.log(usertwo.email);
+
+// In stack uwill receive  a copy of the original data whereas in heap u get a refrence of the original value
