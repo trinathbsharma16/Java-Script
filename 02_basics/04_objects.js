@@ -48,3 +48,28 @@ console.log(Object.keys(Whatsapp_User));
 console.log(Object.values(Whatsapp_User));
 console.log(Object.entries(Whatsapp_User));
 console.log(Whatsapp_User.hasOwnProperty('name'));
+//                            Destructure
+const course={
+    name:"JS",
+    fees:"999",
+    Instructor_name:"Trinath",
+}
+const {Instructor_name}=course
+console.log(Instructor_name);
+
+const {Instructor_name:Instructor}=course
+console.log(Instructor);
+
+///++++++++++++++++++++++++++++++++++++  JSON API+++++++++++++++++++++++++++++++++++++++++++++++
+
+/* 
+{
+"name":"Trinath",
+"fees":"Free",
+}
+
+[
+{}
+{}
+]                   Random USer API ,  JASON formatter
+*/
