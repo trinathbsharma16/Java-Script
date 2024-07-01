@@ -34,3 +34,36 @@ function Userloginmessage(username){ //username=Tri this will give a default val
 }
 console.log(Userloginmessage("Trinath"));
 console.log(Userloginmessage());//Will give undefined 
+
+
+function calculatecartprice(...num){   //... Here is rest operator not spread 
+        return num
+}  
+console.log(calculatecartprice(200,500,800))
+
+function cartprice(val1,val2,...num1){// 500 to val1 ,100 to val2 and 800,900 and 400 to num1
+    return num1
+}
+console.log(cartprice(500,100,800,900,400));
+
+const user={
+    username:"Trinath",
+    price:199,
+}
+
+function handleobject(anyobject){
+    console.log(`The username is${anyobject.username} and the price is ${anyobject.price}`);
+}
+handleobject(user)
+handleobject({
+    username:" Sam",
+    price:399
+})
+
+
+const mynewarray=[500,600,800,1000]
+
+function secondalue(getarray){
+    return getarray[1]
+}
+console.log(secondalue(mynewarray));
