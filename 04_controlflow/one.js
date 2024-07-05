@@ -29,3 +29,9 @@ if(userloggedIN && debitcard){
 else{
     console.log("Please get a debit card ");
 }
+
+const LoggedINfromGoogle=true
+const loggedINFromEmail=false
+if(loggedINFromEmail||LoggedINfromGoogle){
+    console.log("The user is logged in");
+}
