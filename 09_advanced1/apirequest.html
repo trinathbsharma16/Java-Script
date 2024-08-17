@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/trinathbsharma16'
+    const xhr=new XMLHttpRequest()
+    xhr.open('Get',requestUrl)
+    //console.log("here");
+    xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            const data=JASON.parse(this.responseText)
+            console.log(data.followers);//this ensures we are talking about this particular context 
+            // Response from user comes in form of string
+            //JASON.parse converts string into jason format 
+            // Dsa console.cc se hi console log aata hai 
+        }
+        
+    }
+    xhr.send()
+    
+</script>
+</html>
