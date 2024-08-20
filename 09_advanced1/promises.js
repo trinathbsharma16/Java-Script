@@ -102,6 +102,8 @@ producePromiseFive()
 async function getallusers(){
 try {
     const response=await fetch('https://api.github.com/users/trinathbsharma16')
+    //The fetch queuq is called microtask queue 
+    // fetch =Data,Web Browser/Node if the request is acceptead it goes to ONfield(Data) if rejected it goes to ON Rejection(data)
     const data =await response.json()//HAve to use await sicne it also takes time to convert 
     console.log(data);
 } catch (error) {
