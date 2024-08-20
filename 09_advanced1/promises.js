@@ -67,3 +67,60 @@ Promisefour
 // allowing you to chain calls to other promise methods.
 .finally(()=> console.log("The promise is either resolved or rejected")
 )
+
+
+const Promisefive=new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error=true
+        if(!error){
+            resolve({username:"Trinath1 ",password:"tri123"})
+        } else{
+            reject('Error:Something went wrong')
+        }
+        
+    },1000)
+})
+
+
+//Doing using async await 
+async function  producePromiseFive(){
+   /* const response =await Promisefive
+    console.log(response);*/
+    //USing try catch
+    try {
+        const response =await Promisefive
+    console.log(response);
+    } catch (error) {
+        console.log('error');
+        
+    }
+    
+}// Propblem with async await is they cannot directly handle the problem 
+
+producePromiseFive()
+
+async function getallusers(){
+try {
+    const response=await fetch('https://api.github.com/users/trinathbsharma16')
+    const data =await response.json()//HAve to use await sicne it also takes time to convert 
+    console.log(data);
+} catch (error) {
+    console.log(error);   
+    
+}
+    
+}
+getallusers()
+
+//Another method for the above code 
+/*
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+
+*/
